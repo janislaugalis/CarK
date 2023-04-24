@@ -1,0 +1,124 @@
+:root{ /*Login iestatījumi */
+  --main-color: #308824;
+  --black: rgb(15, 15, 15);
+  --light-color: rgb(253, 253, 253);
+  --bg: #65AC22;
+  --body: rgb(251, 252, 250);
+  --white: rgb(255, 255, 255);
+  --table-bg: rgb(254, 255, 254);
+  --opacity-color: rgba(43, 39, 39, 0.562);
+  --border: .1rem solid rgba(0, 0, 0, .1);
+  --box-shadow: 0 .5rem 1.5rem rgba(29, 28, 28, 0.2);
+}
+
+*{ /*universālie iestatījumi */
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all .3s ease-out;
+}
+
+::selection{
+  background: var(--main-color);
+  color: #eee;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+
+body {
+  background: var(--body);
+}
+
+input {
+  border: none;
+  font-size: 1rem;
+  line-height: 1.5em;
+  padding: 0;
+}
+
+#login {
+  margin: 7rem auto;
+  width: 20rem;
+}
+
+#login form {
+  margin: auto;
+  padding: 1rem;
+  width: 100%;
+  border-radius: .5rem;
+  background: #1a3815;
+  border-top: .3rem solid #7a838d;
+  border-bottom: 0.3rem solid #7c858f;
+}
+
+#login form h1{
+    font-size: 1.3rem;
+    color: #cccccc;
+    text-align: center;
+    margin-top: -.3rem;
+    margin-bottom: .3rem;
+}
+
+#login form span {
+  background-color: #494646;
+  border-radius: 3px 0px 0px 3px;
+  border-right: 3px solid #eef1f5;
+  color: #c9c5c5;
+  display: block;
+  float: left;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
+
+#login form input[type="text"] {
+  background-color: #3b4148;
+  border-radius: 0px 3px 3px 0px;
+  color: #8f8c8c;
+  margin-bottom: 1em;
+  padding: 0 16px;
+  width: 235px;
+  height: 50px;
+}
+
+#login form input[type="password"] {
+  background-color: #3b4148;
+  border-radius: 0px 3px 3px 0px;
+  color: #8f8c8c;
+  margin-bottom: 1em;
+  padding: 0 16px;
+  width: 235px;
+  height: 50px;
+}
+
+#login form input[type="submit"] {
+  background: var(--main-color);
+  border: 0;
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  color: #eee;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+#login form input[type="submit"]:hover {
+  background: var(--light-color);
+}
+
+#login .error{
+  text-align: center;
+  border-radius: .5rem;
+  margin-top: 1rem;
+  color: #ffffff;
+  width: 100%;
+  padding: .7rem 0;
+  background-color: #4e1a1a;
+}

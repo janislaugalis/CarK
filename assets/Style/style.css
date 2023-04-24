@@ -1,0 +1,142 @@
+
+/*--------- Iestatam rootu*/
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+
+}
+
+/*--------- Hero sadaļa*/
+.hero {
+    background-image: url('/kvalifikācijas darbs/assets/Bildes/Car-K.png');
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+  
+  .hero-content {
+    color: #fff;
+    z-index: 1;
+  }
+  
+  .hero h1 {
+    font-size: 70px;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 30px;
+    margin-bottom: 2rem;
+  }
+  
+  .hero button {
+    padding: 1rem 2rem;
+    font-size: 20px;
+    border: none;
+    background-color: orange;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .hero button:hover {
+    background-color: orangered;
+    color: #fff;
+  }
+/*---- kastākās automašīnas -----*/
+
+.hadivi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+/*---- Izceltās automašīnas -----*/
+
+
+.izceltie_bloki h3 .izceltie_bloki p{
+  line-height: 3.5;
+
+}
+
+.izceltais_bloks {
+  border: 2px solid black;
+
+  
+}
+.izceltie_bloki {
+  border: 2px solid black;
+  min-height: 50rem;
+  
+}
+
+
+.izcelta_bilde {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  max-height: 400px;
+}
+
+#poga_uz_misenem{
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+
+    color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+  
+  button:hover {
+    background-color: orange; /* Dark green */
+  }
+
+  

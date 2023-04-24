@@ -1,0 +1,224 @@
+/* Importē fontus, kuri tiks pielietoti stilam */
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+
+:root{ /*Mājaslapas iestatījumi */
+    --main-color: #308824;
+    --black: rgb(15, 15, 15);
+    --light-color: rgb(189, 184, 184);
+    --bg: #65AC22;
+    --body: rgb(251, 252, 250);
+    --white: rgb(255, 255, 255);
+    --table-bg: rgb(191, 196, 191);
+    --opacity-color: rgba(43, 39, 39, 0.562);
+    --border: .1rem solid rgba(0, 0, 0, .1);
+    --box-shadow: 0 .5rem 1.5rem rgba(29, 28, 28, 0.2);
+}
+
+*{/* universālie iestatījumi */
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .3s ease-out;
+}
+body{
+    background: var(--body);
+}
+::selection{
+    background: var(--main-color);
+    color: rgb(201, 235, 205);
+}
+
+html{
+    font-size: 60.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+}
+
+section{
+    padding: 2rem 11%;
+}
+
+header{ /* Hedera (augšas ) dizains */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--main-color);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+  
+    justify-content: space-between;
+    padding: 1.5rem 10%;
+}
+
+header .logo{
+    font-size: 3rem;
+    color: var(--white);
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+    
+}
+
+.user-ico{
+    font-size: 10rem;
+    color: var(--black);
+    padding: 10rem;
+}
+
+header .navbar a{
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-left: 2rem;
+}
+
+header .navbar a:hover{
+    color: var(--light-color);
+}
+
+header .navbar .active{
+    font-weight: bold;
+    border-bottom: solid .1rem var(--white);
+    padding: 3;
+}
+
+#menu-btn{  
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.3rem;
+    border-radius: .5rem;
+    color: var(--main-color);
+    background: var(--bg);
+    display: none;
+}
+
+.navbar .lietotajs{
+    font-size: 2rem;
+    color: var(--white);
+    margin-right: -1rem;
+}
+
+.navbar .lietotajs i{
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-right: .5rem;
+}
+/*  admina un kopsavilkuma sadaļas dizaina noformējums */
+.admin{
+    margin-top: 15rem;
+}
+
+.admin .kopsavilkums{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 2fr));
+    gap: 1.5rem;
+}
+
+.admin .kopsavilkums .informacija{
+    padding: 1rem;
+    text-align: center;
+    border: var(--border);
+    border-radius: 1.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.admin .kopsavilkums .informacija span{
+    display: inline-block;
+    width: 10rem;
+    height: 10rem;
+    line-height: 6rem;
+    padding: 2rem;
+    font-size: 3rem;
+    color: var(--main-color);
+    background: #ccc;
+    border-radius: 25%;
+}
+
+.admin .kopsavilkums .informacija h3{
+    color: var(--black);
+    padding: 1rem 0;
+    font-size: 2rem;
+}
+
+.admin .kopsavilkums .informacija p{
+    color: var(--black);
+    line-height: 1.8;
+    font-size: 1.5rem;
+}
+
+.admin .row{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.admin .row .info{
+    flex: 1 1 40rem;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+}
+
+.admin .row .info2{
+    flex: 1 1 15rem;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+}
+
+.head-info{
+    background-color: var(--bg);
+    color: var(--black);
+    padding: 2rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.head-color{
+    background-color: var(--bg);
+}
+
+table{
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+th, td{
+    text-align: center;
+    height: 4rem;
+    border-bottom: 1px solid #ddd;
+    border-radius: .5rem;
+    color: var(--black);
+}
+
+tr:hover{
+    background-color: var(--opacity-color);
+}
+
+th{
+    font-weight: bold;
+    color: var(--black);
+    background: var(--table-bg);
+    border-radius: .5rem;
+}
+
+.footer{
+    background: none;
+    color: rgb(7, 7, 7);
+    text-align: center;
+    font-weight: bold;
+    padding: 4rem;
+    margin-top: 10rem;
+    font-size: 1.5rem;
+    position: center;
+}
