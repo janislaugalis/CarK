@@ -136,7 +136,7 @@
   }
   
   button:hover {
-    background-color: orange; /* Dark green */
+    background-color: orange; 
   }
 
  
@@ -240,7 +240,6 @@
   margin: 10px 0;
 }
 
-/* Style for the badges */
 .badges {
   display: inline-block;
   padding: 5px 10px;
@@ -259,7 +258,7 @@
   background-color: #5cb85c;
 }
 
-/* Set full width for the container */
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -267,13 +266,12 @@
   padding: 0 20px;
 }
 
-/* Set full width for the row */
 .row {
   width: 100%;
   margin: 0;
 }
 
-/* Set full width for the katalogs container */
+
 .katalogs {
   width: 100%;
   margin: 0;
@@ -283,7 +281,6 @@
   justify-content: space-between;
 }
 
-/* Set styles for the car list items */
 .nomāt {
   background-color: #fff;
   border-radius: 5px;
