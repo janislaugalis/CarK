@@ -2,7 +2,7 @@
     $serveravards = "localhost";
     $lietotajvards = "root";
     $parole = "";
-    $dbvards = "sabiedriskais_autobuss"; // mainot šo tiek norādīts datu bāzes nosaukums ar kuru lietotājs vēlas izveidot savienojumu
+    $dbvards = "Car-k"; // mainot šo tiek norādīts datu bāzes nosaukums ar kuru lietotājs vēlas izveidot savienojumu
 
     $savienojums = mysqli_connect($serveravards, $lietotajvards, $parole, $dbvards);
 

@@ -1,0 +1,163 @@
+.mekletajs .btn {
+
+  width: 50px;
+  font-size: 1rem;
+  background-color: #868686;
+  border-radius: 0px 5px 5px 0px;
+
+}
+
+
+.mekletajs form {
+  max-width: 1270px;
+  width: 100%;
+
+  background: #FFFFFF;
+  border: 2px solid #3b3b3b;
+  border-radius: 10px;
+}
+
+.mekletajs .sanemsanadat {
+  border: 0px;
+  width: 100px;
+
+}
+
+.mekletajs label {
+  font-family: 'Lato';
+  font-size: 14px;
+  color: #777777;
+
+
+}
+
+.mekletajs .nodosanadat {
+  border: 0px;
+  width: 100px;
+}
+
+.mekletajs input[type="time"] {
+  border: 0px;
+}
+
+.mekletajs .ikona {
+  font-size: 20px;
+  color: #666768;
+
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  background: none;
+  display: none;
+  width: 70px;
+
+
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: none;
+  display: none;
+}
+
+.br-1 {
+  border-right: 1px solid #D8D8D8;
+}
+
+.mekletajs .iespejas {
+  font-size: 14px;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #394757;
+  letter-spacing: 0.145em;
+  width: 60px;
+  max-width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+input {
+  width: 164px;
+}
+
+.mekletajs .poga {
+  font-size: 35px;
+
+
+}
+.mekletajs .poga .hover {
+  
+  border-color: #394757!important;
+
+
+}
+
+.izmers {
+  margin-left: 15px !important;
+
+}
+
+.sanemsanalaiks {
+  width: 50px;
+  border: 0px;
+}
+
+.nodosanalaiks {
+  width: 50px;
+  border: 0px;
+}
+
+#select1 {
+  border: 0px;
+
+}
+
+#select2 {
+  border: 0px;
+}
+
+#input1 {
+  border: 0px;
+  max-width: 100px;
+}
+
+#input2 {
+  border: 0px;
+  max-width: 100px;
+}
+
+#close1 {
+  border: 0px;
+  background-color: #FFFFFF;
+}
+
+#close2 {
+  border: 0px;
+  background-color: #FFFFFF;
+}
+
+.col-laiks {
+  flex: 0 0 auto;
+  width: 10% !important;
+}
+
+.col-datums {
+  flex: 0 0 auto;
+  width: 15% !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .col-laiks {
+    flex: 0 0 auto;
+    width: 100% !important;
+  }
+  
+  .col-datums {
+    flex: 0 0 auto;
+    width: 100% !important;
+  }
+  .izmers {
+    margin-left: 0px !important;
+  
+  }
+}
