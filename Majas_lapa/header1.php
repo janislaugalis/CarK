@@ -46,9 +46,9 @@
                                 <li><a href="index.php">Sākums</a></li>
                                 <li><a href="parmums.php">Par Car K</a></li>
                                 <li><a href="katalogs.php">Autonoma</a></li>
-                                <li><a href="index.php">BUJ</a> </li>
-                                <li><a href="index.php">Cenas</a>
-                                <li><a href="index.php">Kontakti</a></li>
+                                <li><a href="buj.php">BUJ</a> </li>
+                                <li><a href="cenas.php">Cenas</a>
+                                <li><a href="kontakti.php">Kontakti</a></li>
                             </ul>
                         </nav>
                     </div>
