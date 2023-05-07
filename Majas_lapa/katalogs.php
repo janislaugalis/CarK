@@ -16,7 +16,7 @@
 </head>
 
 
-<div class="autonoma">
+<div class="main">
     <div id="content" class="content full">
         <div class="container">
             <div class="row">
@@ -55,6 +55,9 @@
                         </div>
                         </ul>
                     </li>
+
+
+                    
                     <li class="nomāt col-md-12">
                         <div class="col-md-4">
                             <a href="#" class="bilde"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER"
