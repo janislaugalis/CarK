@@ -276,6 +276,7 @@
   top: -0.25em;
   width: .66em;
   border-top: 3px solid #e20;
+	color: #157CB6!important;
 }
 .picker__button--close:before {
   content: "\D7";

@@ -15,6 +15,16 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 
+<div class="container-fluid mekletajs gx-0">
+	<div class="row">
+		<div class="col">
+			<form class="container-fluid">
+			<?php include('filtrs.php');  ?> 
+			</form>
+		</div>
+	</div>
+</div>
+
 
 <div class="main">
     <div id="content" class="content full">
@@ -22,10 +32,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="galva">
-                        
-                        <?php include('filtrs.php');  ?>
                         <h4 class=" h4 mb-100">Mūsu automašīnas</h4>
                     </div>
+
                     <div class="katalogs">
                         <ul>
                             <li class="nomāt col-md-12">
@@ -37,43 +46,44 @@
 
                                 </div>
                     </div>
+                    
                     </ul>
                     </li>
-                    <li class="nomāt col-md-12">
-                        <div class="col-md-4">
-                            <a href="#" class="bilde"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER"
-                                    alt=""> <span class="images-count"><i class="fa fa-picture-o"></i> 1</span> <span
-                                    class="badges">Atlaide</span> </a>
+                    <?php
+require("connect_db.php");
 
-                        </div>
-                        <div class="col-md-8">
-                            <div class="auto_info">
-                                <div class="cena"><strong>$</strong><span>cena dienā</span></div>
-                                <h3><a href="#">Nosaukums</a></h3>
-                                <p> patēriņš, ietilpība u.c</p>
-                            </div>
-                        </div>
-                        </ul>
-                    </li>
+// Query the database to get the data
+$visasAutomasinasVaicajums = 'SELECT * FROM automasinas a JOIN virsbuves_tipi vi ON a.id_virsbuves_tips = vi.virsbuves_tips_id JOIN lietotaji c ON c.lietotaji_id = a.id_lietotaji JOIN atrumkarba d ON a.id_atrumkarba = d.atrumkarba_id JOIN dzineja_veids dz ON dz.dzineja_veids_id = a.id_dzineja_veids ORDER BY a.pievienosanas_datums DESC;';
+$atlasaVisasAutomasinas = mysqli_query($savienojums, $visasAutomasinasVaicajums) or die("Nekorekts vaicājums!");
+$result = mysqli_query($savienojums, $visasAutomasinasVaicajums);
 
-
+// Check if there are any results
+if (mysqli_num_rows($result) > 0) {
+    // Output the HTML code for each row
+    while ($row = mysqli_fetch_assoc($result)) {
+            echo '<li class="nomāt col-md-12">';
+                echo '<div class="col-md-4">';
+                    echo '<a href="#" class="bilde">';
+                    echo '<img src="' . $row['attels'] . '" alt="car image">';
+                    echo '</a>';
+                echo '</div>';
+                echo '<div class="col-md-8">';
+                    echo '<div class="auto_info">';
                     
-                    <li class="nomāt col-md-12">
-                        <div class="col-md-4">
-                            <a href="#" class="bilde"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER"
-                                    alt=""> <span class="images-count"><i class="fa fa-picture-o"></i> 2</span> <span
-                                    class="badges">Atlaide</span> </a>
+                        echo '<div class="cena"><strong>$</strong><span>' . $row['cena_diena'] . ' dienā</span></div>';
+                        echo '<h3><a href="auto_lapa.php?id=' . $row['automasinas_id'] . '">' . $row['marka'] . ' ' . $row['modelis'] . '</a></h3>';
+                            echo '<p>' . $row['gads'] . '</p>';
+                        echo '</div>';
+                    echo '</div>';
+            echo '</li>';
+    }
+} else {
+    echo "No results found.";
+}
 
-                        </div>
-                        <div class="col-md-8">
-                            <div class="auto_info">
-                                <div class="cena"><strong>$</strong><span>cena dienā</span></div>
-                                <h3><a href="#">Nosaukums</a></h3>
-                                <p> patēriņš, ietilpība u.c</p>
-                            </div>
-                        </div>
-                        </ul>
-                    </li>
+// Close the database connection
+mysqli_close($savienojums);
+?>
 
                 </div>
             </div>
@@ -86,3 +96,10 @@
 
 
 <?php include('footer.php'); ?> <!-- Pievieno footeri. -->
+
+
+
+                    <style>
+
+
+</style>

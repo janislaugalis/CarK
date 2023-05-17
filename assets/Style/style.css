@@ -27,7 +27,7 @@
 
 /*--------- Hero sadaļa*/
 .hero {
-    background-image: url('/CarK/assets/Bildes/Car-K.png');
+    background-image: url('/CarK/assets/Bildes/Audi_A6.jpg');
     background-size: cover;
     height: 500px;
     display: flex;
@@ -89,6 +89,10 @@
   font-size: 40px;
   margin-bottom: 1rem;
   margin-top: 1rem;
+}
+
+.main{
+  background-color: #afaeae7c;
 }
 
 /*---- Izceltās automašīnas -----*/
@@ -335,4 +339,83 @@
 #atsauksmes_h3{
   align-items: center;
   text-align: center;
+}
+
+
+/* kontakti */
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Style the main container */
+.main {
+  padding: 30px;
+  background-color: #f7f7f7;
+}
+
+/* Style the form header */
+h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Style the form fields */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* Style the form submit button */
+input[type="submit"] {
+  background-color: #6e0000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+input[type="submit"]:hover {
+  background-color: #000000;
+  color: #fff;
+}
+
+
+#message {
+  margin-top: 20px;
+}
+
+/*  section */
+.col-md-6:nth-child(2) {
+  background-color: #fff;
+  padding: 30px;
+}
+
+/* lokacijas hederis */
+.col-md-6:nth-child(2) h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* adrese */
+.padding-as25 {
+  padding: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* lokācija, telefons */
+.padding-as25 p {
+  font-size: 16px;
+  margin-bottom: 10px;
 }

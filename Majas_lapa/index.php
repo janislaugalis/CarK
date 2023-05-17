@@ -23,11 +23,17 @@
     </div>
 </section>
 
-<div class="galva">
-    <h4 id="filtra_teksts margin-20px">Rezervē jau tagad</h4>
-    <?php include('filtrs.php');  ?>
-    
+<div class="container-fluid mekletajs gx-0">
+	<div class="row">
+		<div class="col">
+			<form class="container-fluid">
+			<?php include('filtrs.php');  ?> 
+			</form>
+		</div>
+	</div>
 </div>
+
+
 
 <div class="main" role="main">
     <div id="content" class="content full">
