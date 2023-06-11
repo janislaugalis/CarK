@@ -1,59 +1,47 @@
 <?php include('header1.php'); ?>
-<!-- Identificē lapusi -->
-<!DOCTYPE html>
-<html lang="lv">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>car K</title>
-    <link rel="stylesheet" href="/CarK/assets/Style/auto_lapa_style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-</head>
-
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                
+                <style>
+                #content .form {
+                    margin:0px!important;
+
+                </style>
                 <?php
                 require("connect_db.php");
                 // Retrieve the car ID from the query parameter
                 $carID = $_GET['id'];
 
                 // Query the database to fetch the details of the specified car
-                $carQuery = "SELECT * FROM automasinas WHERE automasinas_id = ?";
-                $stmt = mysqli_prepare($savienojums, $carQuery);
-                mysqli_stmt_bind_param($stmt, 'i', $carID);
-                mysqli_stmt_execute($stmt);
-                $carResult = mysqli_stmt_get_result($stmt);
+                $visasAutomasinasVaicajums = 'SELECT * FROM automasinas a JOIN virsbuves_tipi vi ON a.id_virsbuves_tips = vi.virsbuves_tips_id JOIN lietotaji c ON c.lietotaji_id = a.id_lietotaji JOIN atrumkarba d ON a.id_atrumkarba = d.atrumkarba_id JOIN dzineja_veids dz ON dz.dzineja_veids_id = a.id_dzineja_veids ORDER BY a.pievienosanas_datums DESC;';
+                $atlasaVisasAutomasinas = mysqli_query($savienojums, $visasAutomasinasVaicajums) or die("Nekorekts vaicājums!");
+                $result = mysqli_query($savienojums, $visasAutomasinasVaicajums);
 
                 // Check if the car exists
-                if (mysqli_num_rows($carResult) > 0) {
-                    $carData = mysqli_fetch_assoc($carResult);
+                if (mysqli_num_rows($result) > 0) {
+                    $row = mysqli_fetch_assoc($result);
                     // Display the car details and buy option
-                    echo '<h2>' . $carData['marka'] . ' ' . $carData['modelis'] . '</h2>';
-                    echo '<p>Year: ' . $carData['gads'] . '</p>';
-                    echo '<p>Price per day: $' . $carData['cena_diena'] . '</p>';
-                    echo '<p>Motors: ' . $carData['dzineja_tilpums'] . '</p>';
+                    echo '<div style="text-align: center;">';
+                    echo '<h2>' . $row['marka'] . ' ' . $row['modelis'] . '</h2>';
+                    echo '</div>';
+                    echo '<div class="row">';
+                    echo '<div class="col-md-6" id="content" style="z-index: 1000;">';
+                    include('test.php');
+                    echo '</div>';
+                    echo '<div class="col-md-6">';
+                    // Display the car picture
+                    echo '<img src="' . $row['attels'] . '" alt="Car Image">';
+                    echo '</div>';
+                    echo '</div>';
 
                     // Display the buy option, e.g., a form or button to initiate the purchase
                     echo '<form action="buy_car.php" method="post">';
                     echo '<input type="hidden" name="car_id" value="' . $carID . '">';
-                    echo '<input type="submit" value="Buy Car">';
                     echo '</form>';
                 } else {
                     echo "Car not found.";
                 }
-                ?>
-            </div>
-            <div class="col-md-6">
-                <?php
-                // Display the car picture
-                echo '<img src="' . $carData['attels'] . '" alt="Car Image">';
                 ?>
             </div>
         </div>

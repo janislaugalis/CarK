@@ -1,47 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
 
-  .header{
-    height:80px;
-    position:relative;
-    z-index:8;
-    box-shadow:0 1px 2px rgba(0,0,0,.1);
-  }
-  .kontakti{
-    text-align:right;
-  }
-  .kontakti > div{
-    display:inline-block;
-    margin:20px 0 0 0;
-    padding:0 20px;
-    border-right:1px solid #efefef;
-    color:#999;
-    text-align:left;
-  }
-  .navigacija > ul > li{
-    float:left;
-    font-size:15px;
-    position:relative;
-    list-style-type: none;
-
+:root {
+  --main-color: darkred;
+  --black: #000;
+  --light-color: #777;
+  --bg: #000;
+  --body: #fff;
+  --white: #eee;
+  --table-bg: #eee;
+  --opacity-color: rgba(0, 0, 0, .2);
+  --border: .1rem solid rgba(0, 0, 0, .1);
+  --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .2);
 }
 
+*{
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .3s ease-out;
+}
+
+ /* Header Styles */
+ .header {
+  height: 80px;
+  position: relative;
+  z-index: 1000;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+  display: flex;
+  align-items: center!important;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: #fff;
+  max-width: 1170px!important;
+  margin: 0 auto!important;
+  padding: 0 20px!important;
+}
+
+.logo {
+  margin: 0;
+}
+
+.logo a {
+  display: inline-block;
+}
+
+.logo img {
+  max-width: 200px; /* Adjust the value as needed */
+  height: auto;
+}
+
+.kontakti {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.kontakti span {
+  color: #999;
+}
+
+.navigacija {
+  background-color: #f1f1f1;
   
-  .navigacija > ul > li > a{
-    padding:15px 22px;
-    display:block;
-    text-decoration:none;
-    border-right:1px solid rgba(0,0,0,.05);
-    color: black;
-  }
+}
 
-  .izvelne li:hover > a {
-    color: #fff;
-    background-color: orange;
-  }
+.navigacija ul {
+  display: flex;
+  list-style: none;
+  max-width: 1170px!important;
+  margin: 0 auto!important;
+  padding: 0 20px!important;
+}
 
+.navigacija li {
+  margin: 0;
+}
 
+.navigacija a {
+  display: block;
+  padding: 15px 22px;
+  text-decoration: none;
+  color: black;
+}
 
-
-
-
-
-
+.navigacija a:hover {
+  color: #fff;
+  background-color: darkred;
+}

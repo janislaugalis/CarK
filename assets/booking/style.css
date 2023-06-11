@@ -1,0 +1,517 @@
+@media only screen and (max-width: 768px) {
+	.booking-container {
+		min-width:200px;
+		width:100%!important;
+		height:100% !important;
+	}
+	.col-pilots-7 {
+		max-width: 100%!important;
+		width: 100%!important;
+	}
+	.col-pilots-5 {
+		max-width: 100%!important;
+		width: 100%!important;
+	}
+
+	#wizard .content {
+		height:100% !important;
+	}
+	#wizard .input-field-row-2 {
+		padding-left: 25px !important;
+	}
+	#wizard .actions ul li {
+		width:49% !important;
+	}
+
+	#wizard .actions ul {
+		display: flex!important;
+		flex-direction: row!important;
+	}
+	#wizard .actions a i {
+		padding:0px !important;
+	}
+
+	#wizard .steps {
+		display: block!important;
+		align-items: center;
+		justify-content: center;
+		max-width: 300px!important;
+		width: 75%!important;
+		margin-left:auto!important;
+		margin-right:auto!important;
+	}
+  }
+
+#wizard .actions a[href="#previous"] {
+	text-align:left !important;
+} 
+
+@media only screen and (min-width: 768px) {
+
+	#wizard .actions a[href="#previous"] i{
+		padding-left:0px !important;
+		padding-right:30px !important;
+	}
+
+}
+
+.booking-container {
+	width: 550px;
+	height: 600px;
+	background-color: #FFFF;
+	padding: 20px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	border-radius: 10px;
+	box-shadow: 0px 6px 12px 1px rgba(10, 106, 247, 0.1) !important;
+	border: 1px solid #E2E2E2;
+}
+
+#booking {
+	width: 100%;
+}
+
+* {
+	font-family: "Montserrat", sans-serif;
+}
+
+#booking input,
+#booking select {
+	font-size: 14px !important;
+	font-weight: 500 !important;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.left-text-container {
+	flex: 1;
+}
+
+.sanemsana {
+	text-align: right;
+	flex: 1;
+}
+
+.rezervesana {
+	flex: 1;
+	text-align: left;
+	position: middle;
+}
+
+.right-text-container {
+	text-align: right;
+	flex: 1;
+
+}
+
+p {
+	margin: 0;
+}
+
+#booking-steps {
+	margin-top: 20px;
+
+}
+
+.datumsno {
+	color: #2C2C2C;
+	height: 17px;
+	text-transform: uppercase;
+}
+
+.ikona {
+	left: 16.04%;
+	right: 83.18%;
+	top: 13.65%;
+	bottom: 85.98%;
+	color: #4294CF;
+}
+
+.laiksno {
+	border: 0px;
+	color: #2C2C2C;
+}
+
+#wizard .price2 {
+	font-weight: 700;
+	font-size: 30px;
+	color: #177DB7;
+	text-align: right;
+}
+
+
+.laikslidz {
+	border: 0px;
+}
+
+#select1 {
+	font-weight: 600;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #2C2C2C;
+	border: 0px;
+}
+
+#select2 {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #2C2C2C;
+	border: 0px;
+}
+
+.wizard label {
+	font-size: 14px;
+	align-items: center;
+}
+
+#wizard {
+	size: 10px;
+}
+
+.fa-pencil {
+	color: #4294CF;
+}
+
+#wizard .steps li.current a {
+	background-color: #55A9E5;
+	color: white;
+}
+
+#wizard .steps li a {
+	border-radius: 100%;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #55A9E5;
+	color: #55A9E5;
+	font-size: 13px;
+}
+
+#wizard .steps li {
+	position: relative;
+}
+
+#wizard .steps {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 100%;
+	width: 100%;
+}
+
+#wizard .steps ul {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30%;
+}
+
+#wizard .steps li:not(:last-child):after {
+	position: absolute;
+	content: '';
+	right: -120%;
+	top: 0%;
+	width: 90%;
+	height: 50%;
+	border-bottom: 1px solid #E2E2E2;
+}
+
+#wizard .booking-title {
+	text-align: center;
+	border-bottom: 1px solid #E2E2E2;
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+	font-weight: 800;
+	font-size: 20px;
+	color: #2C2C2C;
+}
+
+#wizard .small-booking-text {
+	font-size: 14px;
+	font-weight: 600;
+	color: #7E7E7E;
+}
+
+
+#wizard [type="time"],
+#wizard [type="date"] {
+	border: 0px;
+	font-size: 14px;
+	font-weight: 600;
+	color: #2C2C2C;
+}
+
+#wizard input[type="time"]::-webkit-calendar-picker-indicator {
+	background: none;
+}
+
+#wizard input[type="date"]::-webkit-calendar-picker-indicator {
+	background: none;
+}
+
+#wizard,
+#wizard .content {
+
+	overflow: visible !important
+}
+
+‌ #wizard .picker {
+
+	position: relative !important;
+
+}
+
+‌ #wizard .picker__holder {
+
+	min-width: 500px !important;
+
+}
+
+#wizard .input-field-row {
+	padding-left: 20px !important;
+	padding-top: 10px;
+}
+
+#wizard .input-field-row i {
+	padding-right: 7px;
+}
+
+#wizard .small-booking-text i {
+	font-size: 11px;
+	padding-left: 5px;
+}
+
+#wizard .input-field-row-2 {
+	padding-left: 20px ;
+	padding-top: 10px;
+}
+
+#wizard .sanemsana input,
+#wizard .nodosana input {
+	border: 0px;
+	font-size: 14px;
+	font-weight: 600;
+	width: 66%;
+	float: left;
+}
+
+#wizard .sanemsana button,
+#wizard .nodosana button {
+	color: #55A9E5 !important;
+	border: 0px;
+	width: 17px;
+	font-size: 20px;
+	height: 17px;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	margin-left: 10px;
+	margin-top: 3px;
+}
+
+#wizard .sanemsana button,
+#wizard .nodosana button:hover {
+	background-color: white;
+
+}
+
+#wizard .border-top-bottom {
+	border-top: 1px solid #E2E2E2;
+	border-bottom: 1px solid #E2E2E2;
+
+}
+
+#wizard .total {
+	font-weight: 500;
+	font-size: 22px;
+	color: #2C2C2C;
+}
+
+#wizard .total-description {
+	font-weight: 500;
+	font-size: 11px;
+	color: #B1B1B1;
+}
+
+#wizard .price {
+	font-weight: 700;
+	font-size: 30px;
+	color: #177DB7;
+	text-align: right;
+}
+
+#wizard .actions .disabled a {
+	display: none !important;
+}
+
+#wizard .actions a {
+	background-color: #157CB6;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: 600;
+	padding: 10px 15px;
+	border-radius: 9px;
+}
+
+#wizard .actions a i {
+	padding-left: 30px;
+}
+
+/*
+#wizard .aprikojuma-nosaukums{
+  display: inline-block;
+  width: 75%;
+
+  
+
+}
+#wizard .aprikojuma-cena{
+  display: inline-block;
+  width: 25%;
+  
+  text-align: right;
+
+}
+*/
+#wizard .form-check label {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+#wizard .form-check {
+	display: block;
+	width: 100%;
+	display: flex;
+}
+
+#wizard .rezervacija {
+	font-size: 17px;
+	color: #777777;
+	font-weight: 600;
+}
+
+#wizard .nomas-maksa {
+	font-family: "Montserrat", sans-serif;
+	font-size: 20px !important;
+	font-weight: 600 !important;
+
+}
+
+.form-check-input {
+	border-radius: 0px !important;
+	margin-right: 10px !important;
+}
+
+#wizard .rezervacijas-poga1 {
+	color: #4294CF;
+	background-color: #FFFFFF;
+	border-radius: 9px;
+	border-color: #4294CF;
+	font-size: 13px;
+	padding: 10px 15px;
+}
+
+#wizard .rezervacijas-poga2 {
+	color: #FFFFFF;
+	background-color: #157CB6;
+	border-radius: 9px;
+	border-color: #157CB6;
+	font-size: 13px;
+	padding: 10px 15px;
+
+
+}
+
+#wizard .aprikojuma-nosaukums {
+	font-size: 14px;
+	font-weight: 600;
+	color: #2C2C2C;
+}
+
+#wizard .aprikojuma-cena {
+	font-size: 14px;
+	font-weight: 600;
+	color: #777777;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+	background: none !important;
+	display: none !important;
+	width: 70px !important;
+
+
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+	background: none !important;
+	display: none !important;
+	border: 0px !important;
+}
+
+
+#datums1 {
+	border: 0px !important;
+	width: 100px !important;
+	padding: 0px 5px 0px 0px;
+}
+
+#datums2 {
+	border: 0px !important;
+	width: 100px !important;
+	padding: 0px 5px 0px 0px;
+}
+
+#laiks1 {
+	border: 0px !important;
+	width: 100px !important;
+	padding: 0px 5px 0px 0px;
+}
+
+#laiks2 {
+	border: 0px !important;
+	width: 100px !important;
+	padding: 0px 5px 0px 0px;
+}
+
+#select1 {
+	padding: 0px 7px 0px 0px;
+	width: 100%;
+}
+
+#select2 {
+	padding: 0px 7px 0px 0px;
+	width: 100%;
+}
+
+#wizard .col-pilots-7 {
+	max-width: 54%;
+	width: 54%;
+}
+
+#wizard .col-pilots-5 {
+	max-width: 46%;
+	width: 46%;
+}
+
+.rezervacijas-poga5 {
+	color: #FFFF !important;
+	background-color: #157CB6;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: 600;
+	padding: 10px 15px;
+	border-radius: 9px;
+	align-items: center !important;
+
+}

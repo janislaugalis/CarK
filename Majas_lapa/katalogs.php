@@ -96,10 +96,3 @@ mysqli_close($savienojums);
 
 
 <?php include('footer.php'); ?> <!-- Pievieno footeri. -->
-
-
-
-                    <style>
-
-
-</style>

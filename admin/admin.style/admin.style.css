@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+
+:root {
+  --main-color: darkred;
+  --black: #000;
+  --light-color: #777;
+  --bg: #000;
+  --body: #fff;
+  --white: #eee;
+  --table-bg: #fafafa;
+  --opacity-color: rgba(0, 0, 0, .2);
+  --border: .1rem solid rgba(0, 0, 0, .1);
+  --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .2);
+}
+
+*{
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .3s ease-out;
+}
+body{
+    background: var(--body);
+}
+::selection{
+    background: var(--main-color);
+    color: #eee;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+}
+
+html::-webkit-scrollbar{
+    width: 1.3rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: var(--light-color);
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+}
+
+section{
+    padding: 2rem 11%;
+}
+
+.heading{
+    text-align: center;
+    padding-bottom: 3rem;
+    font-size: 4rem;
+    color: var(--black);
+}
+
+.heading span{
+    color: var(--main-color);
+    border-radius: .5rem;
+    background: var(--bg);
+    padding: 0 1.5rem;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: #fff;
+    background: var(--main-color);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.btn:hover{
+    background: var(--light-color);
+}
+
+.btn2{
+    display: inline-block;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #fff;
+    background: var(--main-color);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.btn2:hover{
+    background: var(--light-color);
+}
+
+.btn3{
+    display: inline;
+    float: right;
+    padding: .8rem 2rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: #fff;
+    background: var(--main-color);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    margin: -.5rem 0;
+}
+
+.btn3:hover{
+    background: var(--light-color);
+}
+
+.btn4{
+    margin: 1rem 1rem;
+    /* float: right; */
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: #fff;
+    background: var(--main-color);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width: 98.65%;
+}
+
+.btn4:hover{
+    background: var(--light-color);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--main-color);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 11%;
+}
+
+header .logo{
+    font-size: 3rem;
+    color: var(--white);
+    font-weight: bold;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+header .navbar a{
+    font-size: 1.7rem;
+    color: var(--white);
+    margin-left: 2rem;
+}
+
+header .navbar a:hover{
+    color: var(--light-color);
+}
+
+header .navbar .active{
+    font-weight: bold;
+    border-bottom: solid .1rem var(--white);
+    padding: 0;
+}
+
+header .navbar .js-mainitModu{
+    font-size: 1.7rem;
+    color: var(--bg);
+    background: transparent;
+    margin-right: 2rem;
+}
+
+header .navbar .js-mainitModu:hover{
+    color: var(--light-color);
+}
+
+#menu-btn{
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.3rem;
+    border-radius: .5rem;
+    color: var(--main-color);
+    background: var(--bg);
+    display: none;
+}
+
+.navbar .lietotajs{
+    font-size: 1.7rem;
+    color: var(--white);
+    margin-right: -1rem;
+}
+
+.navbar .lietotajs i{
+    font-size: 1.7rem;
+    color: var(--white);
+    margin-right: .5rem;
+}
+
+.admin{
+    margin-top: 7rem;
+}
+
+.admin .kopsavilkums{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+}
+
+.admin .kopsavilkums .informacija{
+    padding: 2.5rem;
+    text-align: center;
+    border: var(--border);
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.admin .kopsavilkums .informacija span{
+    display: inline-block;
+    width: 10rem;
+    height: 10rem;
+    line-height: 6rem;
+    padding: 2rem;
+    font-size: 3rem;
+    color: var(--white);
+    background: var(--bg);
+    border-radius: 25%;
+}
+
+.admin .kopsavilkums .informacija h3{
+    color: var(--black);
+    padding: 1rem 0;
+    font-size: 2rem;
+}
+
+.admin .kopsavilkums .informacija p{
+    color: var(--black);
+    line-height: 1.8;
+    font-size: 1.5rem;
+}
+
+.admin .row{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.admin .row .info{
+    flex: 1 1 40rem;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+}
+
+.admin .row .info2{
+    flex: 1 1 15rem;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+}
+
+.head-info{
+    background-color: var(--bg);
+    color: var(--black);
+    padding: 2rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.head-color{
+    background-color: var(--bg);
+}
+
+table{
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+th, td{
+    text-align: center;
+    height: 4rem;
+    border-bottom: 1px solid #ffffff;
+    border-radius: .5rem;
+    color: var(--black);
+}
+
+tr:hover{
+    background-color: var(--opacity-color);
+}
+
+.noselect tr:hover{
+    background-color: transparent;
+}
+
+th{
+    font-weight: bold;
+    color: var(--black);
+    background: var(--table-bg);
+    border-radius: .5rem;
+    padding-left: 20px;
+}
+
+table .teksts{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    max-width:30rem;
+}
+
+.user-ico{
+    font-size: 10rem;
+    color: var(--black);
+    padding: 4rem;
+}
+
+.value{
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+select{
+    height: 4rem;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    margin: 1rem 0;
+}
+
+table .box{
+    margin: .7rem 1rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    border-radius: .5rem;
+    background: var(--table-bg);
+    width: 98%;
+}
+
+table .box:focus{
+    background: var(--opacity-color);
+}
+
+table .box2{
+    margin: .7rem 1rem;
+    padding-left: .5rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    border-radius: .5rem;
+    background: var(--table-bg);
+    width: 98%;
+}
+
+table .box2:focus{
+    background: var(--opacity-color);
+}
+
+table .box2 option {
+    background: var(--table-bg);
+    color: var(--black);
+  }
+
+table .main{
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+    border-radius: 8px;
+    border-color: #000;
+}
+
+.tabAttels{
+    width: 30rem;
+    height: auto;
+    margin: 1rem;
+    vertical-align:middle;
+    margin-bottom: 30rem;
+
+}
+
+.tabuluAttels{
+    width: 30rem;
+}
+
+.mazieTabulasAtteli{
+    width: 17rem;
+    height: auto;
+    margin: 1rem;
+    vertical-align:middle;
+}
+
+.mazieTabulasAtteliIzmers{
+    width: 17rem;
+}
+
+.pieteiksanasKluda{
+    font-size: 2rem;
+    text-align: center;
+    margin: 5rem;
+    padding: 3rem;
+    color: #eee;
+    border-radius: .5rem;
+    border: var(--border);
+}
+
+.pieteiksanasKluda a{
+    color: #ccc;
+    text-decoration: underline;
+}
+
+.pieteiksanasKluda a{
+    color: rgba(0, 0, 0, .1);
+}
+
+.pieteiksanasKluda.sarkans{
+    background: #ca4444;
+}
+
+.pieteiksanasKluda.zals{
+    background: #57a141;
+}
+
+.sarkans1{
+    color: #ca4444;
+}
+
+.zals1{
+    color: #57a141;
+}
+
+
+.footer{
+    background: var(--opacity-color);
+    color: var(--black);
+    text-align: center;
+    padding: 4rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+
+body {
+  background: var(--body);
+  color: var(--white);
+}
+
+.informacija span {
+  font-size: 40px;
+  color: var(--main-color);
+}
+
+.heading {
+  color: var(--black);
+}
+
+.btn,
+.btn2,
+.btn3,
+.btn4 {
+  color: #fff;
+  background: var(--main-color);
+}
+
+.btn:hover,
+.btn2:hover,
+.btn3:hover,
+.btn4:hover {
+  background: var(--light-color);
+}
+
+header {
+  background: var(--main-color);
+  color: var(--white);
+}
+
+header .logo {
+  color: var(--white);
+}
+
+header .navbar a {
+  color: var(--white);
+}
+
+header .navbar a:hover {
+  color: var(--light-color);
+}
+
+header .navbar .active {
+  color: var(--white);
+  /* border-bottom-color: var(--white);*/
+}
+
+header .navbar .js-mainitModu {
+  color: var(--bg);
+}
+
+header .navbar .js-mainitModu:hover {
+  color: var(--light-color);
+}
+
+
+.admin .kopsavilkums .informacija h3 {
+  color: var(--black);
+}
+
+.admin .kopsavilkums .informacija p {
+  color: var(--black);
+}
+
+.head-info {
+  background-color: var(--bg);
+  color: var(--white);
+}
+
+th,
+td {
+  color: var(--black);
+}
+
+tr:hover {
+  background-color: var(--opacity-color);
+}
+
+table .box, table .box2 {
+  color: var(--black);
+  background: var(--table-bg);
+}
+
+table .box:focus,
+table .box2:focus {
+  background: var(--opacity-color);
+}
+
+.pieteiksanasKluda {
+  color: var(--white);
+  background: #ca4444;
+}
+
+.pieteiksanasKluda a {
+  color: #ccc;
+}
+
+.pieteiksanasKluda.sarkans,
+.sarkans1 {
+  color: #ca4444;
+}
+
+.zals1 {
+  color: #57a141;
+}
+
+.footer {
+  background: var(--opacity-color);
+  color: var(--black);
+}

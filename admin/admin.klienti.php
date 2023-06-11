@@ -1,33 +1,30 @@
-<?php $page = "klienti"; include('header.php'); ?>
+<?php $page = "klienti"; include('admin.header.php'); ?>
 <section class="admin">
         <div class="row">
             <div class="info">
                 <div class="head-info head-color">Klientu pārvaldīšana
                 </div>
                 <table>
-                    <tr> <!-- Izveido klientu attiecīgās sadaļas ! -->
+                    <tr>
                         <th>Vārds Uzvārds</th>
                         <th>Epasts</th>
                         <th>Tālrunis</th>
                         <th>Reģistrēšanās datums un laiks</th>
                     </tr>
                     <?php
-                        require("connect_db.php"); // Pieprasa savienojumu ar datu bāzi !
-                         // Pieprasa Klientu informāciju no datu bāzes un sakārto pēc reģistrēšanās datuma !
-                        $visiklienti = 'SELECT * FROM klienti ORDER BY registeresanas_datums DESC;'; 
-                        $atlasaVisusKlientus = mysqli_query($savienojums, $visiklienti) or die("Nekorekts vaicājums!");
+                        require("../Majas_lapa/connect_db.php");
 
-                        if(mysqli_num_rows($atlasaVisusKlientus) > 0){  // Veic funkciju pēc kā izvada informāciju attiecīgajās kolonās.
-                            while($row = mysqli_fetch_assoc($atlasaVisusKlientus)){
+                        $visiPieteikumiVaicajums = 'SELECT * FROM klienti ORDER BY registresanas_datums DESC;';
+                        $atlasaVisusPieteikumus = mysqli_query($savienojums, $visiPieteikumiVaicajums) or die("Nekorekts vaicājums!");
 
-
-                                echo // K_vards, k_uzvards norāda precīzi klienta vārdu un uzvārdu, lai nepieļautu informācijas saplūšanu, jo vārds un uzvārds ir arī šoferiem.
-                                "
+                        if(mysqli_num_rows($atlasaVisusPieteikumus) > 0){
+                            while($row = mysqli_fetch_assoc($atlasaVisusPieteikumus)){
+                                echo "
                                 <tr>
-                                    <td>{$row['k_vards']} {$row['k_uzvards']}</td> 
+                                    <td>{$row['vards']} {$row['uzvards']}</td>
                                     <td>{$row['epasts']}</td>
                                     <td>{$row['talrunis']}</td>
-                                    <td>{$row['registeresanas_datums']}</td>
+                                    <td>{$row['registresanas_datums']}</td>
                                 </tr>";
                             }
                         }
@@ -37,4 +34,4 @@
         </div>
     </section>
 
-<?php include('footer.php'); ?> <!-- Pievieno footeri ! -->
+<?php include('admin.footer.php'); ?>

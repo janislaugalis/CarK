@@ -1,7 +1,8 @@
 footer {
     background-color: #333;
     color: #fff;
-    padding: 40px 0;
+    padding: 0px;
+    width: 100%;
   }
   
   footer h3 {
@@ -29,7 +30,7 @@ footer {
   }
   
   .container {
-    max-width: 1170px;
+    width: 100%;
     margin: 0 auto;
     align-items: center;
     text-align: center;
