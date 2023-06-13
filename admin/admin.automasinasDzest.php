@@ -1,10 +1,10 @@
 <?php $page = "automasinas"; include('admin.header.php'); ?>
 
-    <section class="admin">
-        <div class="row">
-            <div class="info">
-                <div class="head-info">Automašīnu dzēšana</div>
-                    <?php
+<section class="admin">
+    <div class="row">
+        <div class="info">
+            <div class="head-info">Automašīnu dzēšana</div>
+            <?php
                     if($_SERVER['REQUEST_METHOD'] == 'POST'){
                         if(isset($_POST['izdzest'])){
                             require("../Majas_lapa/connect_db.php");
@@ -25,8 +25,8 @@
                         header("Refresh:1; url=admin.automasinas.php");
                     }
                     ?>
-            </div>
         </div>
-    </section>
+    </div>
+</section>
 
 <?php include('admin.footer.php'); ?>

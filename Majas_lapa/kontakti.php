@@ -48,10 +48,10 @@
             <div class="col-md-6 col-sm-6">
             	<h3>Mūsu atrašanās vieta</h3>
               <div class="padding-as25 lgray-bg">
-                    <p class="big">Nearby Street, Hudson Lane<br>
-                     PO Box. 908509<br>
-                     New York - USA</p>
-                  <p>Email us at <a href="mailto:sales@realspaces.com"><strong>sales@realspaces.com</strong></a> or Call us on <strong>080 378678 90</strong></p>
+                    <p class="big">Brīvības iela 15<br>
+                     <br>
+                     Liepāja</p>
+                  <p>Rakstiet uz <a href="mailto:sales@realspaces.com"><strong>cark@Info.lv</strong></a> Vai zvaniet uz <strong>26573440</strong></p>
               </div>
             </div>
           </div>
