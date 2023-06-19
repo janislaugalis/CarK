@@ -34,9 +34,10 @@
 														<button type="button" id="close1"> <i class="fa-solid fa-xmark xmark"></i> </button>
 													</div>
 													<select class="w-100" onchange="selection()" id="select1" required>
-														<option value="1">Stabu iela 51A-14</option>
-														<option value="2">Lidosta "Rīga"</option>
-														<option value="0">Adrese Rīgā</option>
+
+													<option value="1">Enkurs</option>
+                                        <option value="2">Lidosta "Liepāja"</option>
+                                        <option value="0">Adrese Liepājā</option>
 													</select>
 												</div>
 											</div>
@@ -59,9 +60,10 @@
 														<button type="button" id="close2"><i class="fa-solid fa-xmark xmark"></i></button>
 													</div>
 													<select class="w-100" onchange="selection2()" id="select2" required>
-														<option value="1">Stabu iela 51A-14</option>
-														<option value="2">Lidosta "Rīga"</option>
-														<option value="0">Adrese Rīgā</option>
+
+													<option value="1">Enkurs</option>
+                                       				 <option value="2">Lidosta "Liepāja"</option>
+                                       				 <option value="0">Adrese Liepājā</option>
 													</select>
 												</div>
 											</div>

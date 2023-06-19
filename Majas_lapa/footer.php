@@ -32,7 +32,8 @@
         <p>Baseina iela 13
           Liepāja<br>
           Phone: +37155555588<br>
-          Email: cark@carK/p>
+          Email: cark@carK 
+        </p>
       </div>
     </div>
   </div>

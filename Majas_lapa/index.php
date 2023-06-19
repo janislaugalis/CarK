@@ -84,17 +84,17 @@
                     <div class="review col-md-4">
                         <h5 class="card-title">Reinis Ķēde</h5>
                         <p class="card-text">Salonā nebij smēķēts</p>
-                        <p class="card-text"><small class="text-muted">Posted on 01/01/2022</small></p>
+                        <p class="card-text"><small class="text-muted">Publicēts 01/01/2022</small></p>
                     </div>
                     <div class="review col-md-4">
                         <h5 class="card-title">Reinis Ķēde</h5>
                         <p class="card-text">Salonā nebij smēķēts</p>
-                        <p class="card-text"><small class="text-muted">Posted on 01/01/2022</small></p>
+                        <p class="card-text"><small class="text-muted">Publicēts 01/01/2022</small></p>
                     </div>
                     <div class="review col-md-4">
                         <h5 class="card-title">Reinis Ķēde</h5>
                         <p class="card-text">Salonā nebij smēķēts</p>
-                        <p class="card-text"><small class="text-muted">Posted on 01/01/2022</small></p>
+                        <p class="card-text"><small class="text-muted">Publicēts 01/01/2022</small></p>
                     </div>
                 </div>
             </div>
