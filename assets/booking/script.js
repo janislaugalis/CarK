@@ -145,7 +145,7 @@ $(document).ready(function () {
 	date2 = new Date(date2);
 	var milli_secs = date2.getTime() - date1.getTime();
 
-	// Convert the milli seconds to Days 
+	// Pārveido mili sekundes
 	var days = milli_secs / (1000 * 3600 * 24);
 
 	
@@ -248,7 +248,7 @@ function checkCookie() {
 
         selection2();
         selection();
-        // setdate(sanemsanas_datums,nodosanas_datums);
+         setdate(sanemsanas_datums,nodosanas_datums);
 
     } else {
 

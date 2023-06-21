@@ -314,15 +314,19 @@
                                             <span class="total-description d-block">*ar 15% atlaidi rezervējot un
                                                 apmaksājot internetā</span>
                                         </div>
+                                      
                                         <div class="col-md-4">
-                                            <span class="price d-block w-100">
-                                                €400*
-                                            </span>
+                                        <span class="price d-block w-100">
+                                                €400
+                                            </span> 
+                                        </div>
                                         </div>
 
                                     </div>
                                         <div class="col-md-6">
-                                            <button class="btn d-block w-100 mt-3  rezervacijas-poga2" type="button">Rezervēt un apmaksāt</button>
+                                        <form action="apmaksa.php?automasinas_id=<?php echo $row['automasinas_id']; ?>" method="POST">
+                                            
+                                            </form>
 
                                         </div>
                                     </div>
@@ -337,13 +341,15 @@
             </div>
         </form>
     </div>
+    
 
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</html>
+
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js"
     integrity="sha512-bE0ncA3DKWmKaF3w5hQjCq7ErHFiPdH2IGjXRyXXZSOokbimtUuufhgeDPeQPs51AI4XsqDZUK7qvrPZ5xboZg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="/CarK/assets/booking/script.js"></script>
-
-</html>

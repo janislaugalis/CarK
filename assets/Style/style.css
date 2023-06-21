@@ -1,4 +1,6 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
 /*--------- Iestatam rootu*/
 :root {
     --blue: #007bff;
@@ -104,12 +106,12 @@
 }
 
 .izceltais_bloks {
-  border: 2px solid black;
+
 
   
 }
 .izceltie_bloki {
-  border: 2px solid black;
+
   min-height: 50rem;
   
 }
@@ -306,7 +308,7 @@
   padding: 0;
 }
 
-/* Set styles for the images count */
+
 .images-count {
   display: inline-block;
   padding: 5px 10px;
@@ -349,19 +351,19 @@ body {
   font-size: 16px;
 }
 
-/* Style the main container */
+
 .main {
   padding: 30px;
   background-color: #f7f7f7;
 }
 
-/* Style the form header */
+
 h3 {
   font-size: 24px;
   margin-bottom: 20px;
 }
 
-/* Style the form fields */
+
 input[type="text"],
 input[type="email"],
 textarea {
@@ -373,7 +375,7 @@ textarea {
   font-size: 16px;
 }
 
-/* Style the form submit button */
+
 input[type="submit"] {
   background-color: #6e0000;
   color: #fff;
@@ -395,7 +397,6 @@ input[type="submit"]:hover {
   margin-top: 20px;
 }
 
-/*  section */
 .col-md-6:nth-child(2) {
   background-color: #fff;
   padding: 30px;

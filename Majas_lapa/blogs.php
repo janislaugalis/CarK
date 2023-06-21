@@ -1,3 +1,10 @@
+<STYLE>
+  .mazieTabulasAtteli {
+    height: 300px!important;
+    width: 500px!important;
+  }
+</STYLE>
+
 <?php $page = "blogs"; include('header1.php'); ?> <!-- Identificē lapusi -->
 <div class="container">
   <div class="row">
@@ -23,20 +30,20 @@
                   <img class='mazieTabulasAtteli img-fluid' src='{$row['attels']}' alt=''>
                   <div class='caption'>{$row['virsraksts']}</div>
                   <div class='date'>{$row['pievienosanas_datums']}</div>
-                  <button class='btn btn-primary'>Read More</button>
+                  <button class='btn btn-primary'>Lasīt vairāk</button>
                 </div>
               </td>
               ";
 
               $counter++;
 
-              // If three items are displayed, close the row and start a new one
+              
               if ($counter % 3 == 0) {
                 echo "</tr><tr>";
               }
             }
 
-            // Check if there are any remaining cells to close the row
+            
             if ($counter % 3 != 0) {
               echo "</tr>";
             }

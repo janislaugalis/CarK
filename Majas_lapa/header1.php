@@ -39,18 +39,12 @@
         </div>
         <div class="navigacija">
             <ul>
-                <li><a href="index.php" class="<?php echo ($page == "sakums" ? "active" : ""); ?>"><i
-                            class="fas fa-home"></i>Sākums</a></li>
-                <li><a href="parmums.php" class="<?php echo ($page == "automasinas" ? "active" : ""); ?>"><i
-                            class="far fa-folder"></i>Par Car K</a></li>
-                <li><a href="katalogs.php" class="<?php echo ($page == "pieteikumi" ? "active" : ""); ?>"><i
-                            class="fas fa-bus"></i>Autonoma</a></li>
-                <li><a href="buj.php" class="<?php echo ($page == "blogs" ? "active" : ""); ?>"><i
-                            class="far fa-newspaper"></i>BUJ</a></li>
-                <li><a href="kontakti.php" class="<?php echo ($page == "klienti" ? "active" : ""); ?>"><i
-                            class="fas fa-users"></i>Kontakti</a></li>
-                <li><a href="blogs.php" class="<?php echo ($page == "blogs" ? "active" : ""); ?>"><i
-                            class="fas fa-users"></i>Blogs</a></li>
+                <li><a href="index.php" class="<?php echo ($page == "sakums" ? "active" : ""); ?>">Sākums</a></li>
+                <li><a href="parmums.php" class="<?php echo ($page == "automasinas" ? "active" : ""); ?>">Par Car K</a></li>
+                <li><a href="katalogs.php" class="<?php echo ($page == "pieteikumi" ? "active" : ""); ?>">Autonoma</a></li>
+                <li><a href="buj.php" class="<?php echo ($page == "blogs" ? "active" : ""); ?>">BUJ</a></li>
+                <li><a href="kontakti.php" class="<?php echo ($page == "klienti" ? "active" : ""); ?>">Kontakti</a></li>
+                <li><a href="blogs.php" class="<?php echo ($page == "blogs" ? "active" : ""); ?>">Blogs</a></li>
             </ul>
         </div>
     </header>

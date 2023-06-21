@@ -52,26 +52,26 @@
                     <?php
 require("connect_db.php");
 
-// Query the database to get the data
+
 $visasAutomasinasVaicajums = 'SELECT * FROM automasinas a JOIN virsbuves_tipi vi ON a.id_virsbuves_tips = vi.virsbuves_tips_id JOIN lietotaji c ON c.lietotaji_id = a.id_lietotaji JOIN atrumkarba d ON a.id_atrumkarba = d.atrumkarba_id JOIN dzineja_veids dz ON dz.dzineja_veids_id = a.id_dzineja_veids ORDER BY a.pievienosanas_datums DESC;';
 $atlasaVisasAutomasinas = mysqli_query($savienojums, $visasAutomasinasVaicajums) or die("Nekorekts vaicājums!");
 $result = mysqli_query($savienojums, $visasAutomasinasVaicajums);
 
-// Check if there are any results
+
 if (mysqli_num_rows($result) > 0) {
-    // Output the HTML code for each row
+
     while ($row = mysqli_fetch_assoc($result)) {
             echo '<li class="nomāt col-md-12">';
                 echo '<div class="col-md-4">';
                     echo '<a href="#" class="bilde">';
-                    echo '<img src="' . $row['attels'] . '" alt="car image">';
+                    echo '<img src="' . $row['attels'] . '" alt="car image">' ;
                     echo '</a>';
                 echo '</div>';
                 echo '<div class="col-md-8">';
                     echo '<div class="auto_info">';
                     
                         echo '<div class="cena"><strong>$</strong><span>' . $row['cena_diena'] . ' dienā</span></div>';
-                        echo '<h3><a href="auto_lapa.php?id=' . $row['automasinas_id'] . '">' . $row['marka'] . ' ' . $row['modelis'] . '</a></h3>';
+                        echo '<h3><a href="auto_lapa.php?automasinas_id=' . $row['automasinas_id'] . '">' . $row['marka'] . ' ' . $row['modelis'] . '</a></h3>';
                             echo '<p>' . $row['gads'] . '</p>';
                         echo '</div>';
                     echo '</div>';
@@ -81,7 +81,7 @@ if (mysqli_num_rows($result) > 0) {
     echo "No results found.";
 }
 
-// Close the database connection
+
 mysqli_close($savienojums);
 ?>
 
@@ -96,3 +96,10 @@ mysqli_close($savienojums);
 
 
 <?php include('footer.php'); ?> <!-- Pievieno footeri. -->
+
+<style>
+    .bilde{
+        max-width:350px;
+        max-height:250px;
+    }
+    </style>

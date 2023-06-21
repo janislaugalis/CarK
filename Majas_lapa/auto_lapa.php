@@ -3,19 +3,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <style>
-                #content .form {
-                    margin:0px!important;
-                }
-
-                </style>
+    
                 <?php
                 require("connect_db.php");
                 
-                $carID = $_GET['id'];
+                $carID = $_GET['automasinas_id'];
 
                 
-                $visasAutomasinasVaicajums = 'SELECT * FROM automasinas a JOIN virsbuves_tipi vi ON a.id_virsbuves_tips = vi.virsbuves_tips_id JOIN lietotaji c ON c.lietotaji_id = a.id_lietotaji JOIN atrumkarba d ON a.id_atrumkarba = d.atrumkarba_id JOIN dzineja_veids dz ON dz.dzineja_veids_id = a.id_dzineja_veids ORDER BY a.pievienosanas_datums DESC;';
+                $visasAutomasinasVaicajums = "SELECT * FROM automasinas a JOIN virsbuves_tipi vi ON a.id_virsbuves_tips = vi.virsbuves_tips_id JOIN lietotaji c ON c.lietotaji_id = a.id_lietotaji JOIN atrumkarba d ON a.id_atrumkarba = d.atrumkarba_id JOIN dzineja_veids dz ON dz.dzineja_veids_id = a.id_dzineja_veids where a.automasinas_id = $carID ORDER BY a.pievienosanas_datums DESC";
                 $atlasaVisasAutomasinas = mysqli_query($savienojums, $visasAutomasinasVaicajums) or die("Nekorekts vaicājums!");
                 $result = mysqli_query($savienojums, $visasAutomasinasVaicajums);
 
@@ -38,13 +33,25 @@
 
                     
                     echo '<form action="buy_car.php" method="post">';
-                    echo '<input type="hidden" name="car_id" value="' . $carID . '">';
+                    echo '<input type="hidden" name="automasinas_id" value="' . $carID . '">';
                     echo '</form>';
                 } else {
                     echo "Car not found.";
                 }
                 ?>
+                                    </div>
+                                        <div class="col-md-6">
+                                            <form action="apmaksa.php?automasinas_id=<?php echo $row['automasinas_id']; ?>" method="POST">
+                                            <button name="apmaksa" id="podzina" class=" btn d-block w-100 mt-3  rezervacijas-poga2" type="submit">Rezervēt un apmaksāt</button>
+                                            </form>
+
+                                        </div>
+                                    </div>
             </div>
+            <div class="col-md-6">
+
+
+                                        </div>
         </div>
     </div>
     <?php include('footer.php'); ?> <!-- Pievieno footeri. -->
@@ -53,4 +60,33 @@
         integrity="sha384-hru6PD2/jTgX7ME1MU8xGvLy2m7B2/lE1E5fDe/wmc3vzIeFHHETQfjW1GoVUNfG" crossorigin="anonymous"></script>
 
 </body>
+<style>
+#podzina{
+    height:30px;
+    width: 70px;
+    background-color: #darkred;
+    color: black;
+    border: 1px;
+    border-radius: 5px;
+    margin-left: 5rem;
+    margin-bottom: 4rem;
+}
+#podzina:hover{
+    background-color: #red;
+}
+
+.apmaksa{
+    height:30px;
+    width: 70px;
+    background-color: #darkred;
+    color: black;
+    border: 1px;
+    border-radius: 5px;
+    margin-left: 5rem;
+    margin-bottom: 4rem;
+}
+.apmaksa:hover{
+    background-color: #red;
+}
+    </style>
 </html>
